@@ -1,0 +1,78 @@
+[
+    {
+      "name": "performancePlayMoneyGames",
+      "loadConfiguration": {
+        "users": 20,
+        "rampup": 20,
+        "gamerounds": 100
+      },
+      "constraints": {
+        "absolute": [
+          {
+            "name": "Game/spin, Game/finish",
+            "threshold": 180
+          },
+          {
+            "name": "Game/start",
+            "threshold": 350
+          },
+          {
+            "name": "Game/close",
+            "threshold": 150
+          },
+          {
+            "name": "Portal/getGames",
+            "threshold": 150
+          }
+        ]
+      }
+    },
+    {
+      "name": "performanceLongRunPlayMoneyGames",
+      "loadConfiguration": {
+        "users": 10,
+        "rampup": 10,
+        "gamerounds": 10
+      },
+      "constraints": {
+        "absolute": [
+          {
+            "name": "Game/spin, Game/finish",
+            "threshold": 150
+          },
+          {
+            "name": "Game/start",
+            "threshold": 1000
+          },
+          {
+            "name": "Game/close",
+            "threshold": 100
+          },
+          {
+            "name": "Portal/getGames",
+            "threshold": 300
+          }
+        ]
+      }
+    },
+    {
+      "name": "memoryMetaStartAllGames",
+      "loadConfiguration": {
+        "users": 1,
+        "rampup": 1,
+        "gamerounds": 5
+      },
+      "constraints": {
+        "absolute": [
+          {
+            "name": "Game/spin, Game/finish",
+            "threshold": 200
+          },
+          {
+            "name": "Game/start",
+            "threshold": 1000
+          }
+        ]
+      }
+    }
+  ]
